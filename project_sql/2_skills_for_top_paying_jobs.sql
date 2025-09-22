@@ -25,8 +25,8 @@ WITH DataAnalyst_EntryLevel_Top10 AS(
         AND 
         job_title_short = 'Data Analyst'
         AND
-        ((job_title ILIKE '%Junior%' OR job_title ILIKE
-        '%Entry%') AND (job_title NOT ILIKE '%Consultant%'))
+        (job_title ILIKE '%Junior%' OR job_title ILIKE
+    '%Entry%')
         AND 
         job_no_degree_mention = TRUE
     ORDER BY
@@ -46,4 +46,4 @@ INNER JOIN
 INNER JOIN
     skills_dim AS skills
     ON 
-    jobs_skills.skill_id = skills.skill_id
+    jobs_skills.skill_id = skills.skill_id;

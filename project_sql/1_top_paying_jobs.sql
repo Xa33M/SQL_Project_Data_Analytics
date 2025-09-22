@@ -32,8 +32,8 @@ WHERE
     AND 
     job_title_short = 'Data Analyst'
     AND
-    ((job_title ILIKE '%Junior%' OR job_title ILIKE
-    '%Entry%') AND (job_title NOT ILIKE '%Consultant%'))
+    (job_title ILIKE '%Junior%' OR job_title ILIKE
+    '%Entry%')
     AND 
     job_no_degree_mention = TRUE
 ORDER BY

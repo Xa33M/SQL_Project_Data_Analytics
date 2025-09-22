@@ -25,8 +25,8 @@ WHERE
     AND
     jobs_fact.job_no_degree_mention = TRUE
     AND
-    (jobs_fact.job_title ILIKE '%Junior%' OR 
-    jobs_fact.job_title ILIKE '%Entry%')
+    (job_title ILIKE '%Junior%' OR job_title ILIKE
+    '%Entry%')
 GROUP BY
     skill
 ORDER BY

@@ -44,12 +44,8 @@ WITH top_paying_skills AS(
         AND
         jobs_fact.job_no_degree_mention = TRUE
         AND
-        (jobs_fact.job_title ILIKE '%Junior%' OR 
-        jobs_fact.job_title ILIKE '%Entry%')
-        AND
-        (jobs_fact.job_title NOT ILIKE '%Web%' OR
-        jobs_fact.job_title NOT ILIKE '%Dev%' OR
-        jobs_fact.job_title NOT ILIKE '%Engineer%')
+        (job_title ILIKE '%Junior%' OR job_title ILIKE
+    '%Entry%')
     GROUP BY
         skills.skill_id,
         skill
@@ -77,8 +73,8 @@ top_in_demand_skills AS(
         AND
         jobs_fact.job_no_degree_mention = TRUE
         AND
-        (jobs_fact.job_title ILIKE '%Junior%' OR 
-        jobs_fact.job_title ILIKE '%Entry%')
+        (job_title ILIKE '%Junior%' OR job_title ILIKE
+    '%Entry%')
     GROUP BY
         skills.skill_id,
         skill
@@ -134,8 +130,8 @@ WHERE
     AND
     jobs_fact.job_no_degree_mention = TRUE
     AND
-    (jobs_fact.job_title ILIKE '%Junior%' OR 
-    jobs_fact.job_title ILIKE '%Entry%')
+    (job_title ILIKE '%Junior%' OR job_title ILIKE
+    '%Entry%')
 GROUP BY
     skills.skills
 HAVING
