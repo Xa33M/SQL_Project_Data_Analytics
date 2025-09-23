@@ -30,12 +30,12 @@ With this project, we will be answering these 5 questions:
 <br>
 
 ##  1. What are the top paying jobs in Data Analytics?
-To answer this question, I looked at Data Analyst jobs that:
+To answer this question, we will look at Data Analyst jobs that:
 - Were **Junior / Entry** level,
 - **Did not** require a degree, and
 - Had a **salary value** mentioned in the posting
 
-The above mentioned filters will be used throughtout this project, as I am focusing specifically on those jobs where the barrier to entry is the lowest.
+The above mentioned filters will be used throughtout this project, as we are focusing specifically on those jobs where the barrier to entry is the lowest.
 
 ```sql
 SELECT
@@ -67,10 +67,10 @@ LIMIT 10;
 ```
 ![Alt text](/Images/Query_1.png)
 What I gathered from the result set:
-- **US dominates in entry level jobs:** &nbsp;With the exeption of one job, all the top 10 jobs are US based.
-- **On-site presence is mandatory:** &nbsp; None of the filtered jobs has a **work from home** option.
-- **Full-time commitment is required:** &nbsp; All jobs require you to be present in the office, full-time.
-- **Unusually high salary in Austria:** This needs to be further investigated as to why the job in Vienna, Austria is paying higher than all other jobs.
+- **Half of the jobs are in the US:** &nbsp;50 % of the jobs are from US based companies, while the rest are from around the world.
+- **On-site jobs dominate:** &nbsp; 8 out of the 10 jobs require the person to be in-office, while the remaining 2 are remote.
+- **Full-time commitment is required:** &nbsp; All jobs require you to be present in the office, full-time. One job's schedule is not prorperly laid out, mentioning "Full-time, part-time, and Contractor" which needs to be mentioned properly in the job posting.
+- **Wide salary range:** Jobs range in salary from 85k - 163k dollars, which shows that job location plays an important role in the pay you can expect for a certain role.
 
 <br>
 
@@ -121,14 +121,15 @@ The result:
 
 ![Alt text](/Images/Query_2.png)
 - **SQL** is the top skill, appearing in 8 jobs.
-- **NoSQL, Matlab, Python and R** are also popular, each appearing in 5 jobs. 
-- **Excel** is not as popular as SQL for top 10 jobs, appearing in only 3 jobs.
-- Data visualization tools, such as **Tableau, Power BI** are not essential for top 10 jobs.
-- **Mystery solved:** The job in Vienna, Austria listed AWS and Spark as essential skills. AWS comes under **cloud skills**, whereas Spark comes under **Data Processing / ETL skills**, both of which offer much **higher pay** than pure data analyst jobs.
+ **Excel** is the next most popular skill, appearing in 5 jobs.
+- **Python** completes the top 3, appearing in only 2 jobs. 
+-
+- Out of the 2 most popular Data visualization tools (Tableau and Power BI), only **Tableau** is mentioned, appearing in only 1 job.
+
 <br>
 
 ## 3. What are the most in-demand skills for Data Analytic roles?
-To answer this, I needed to see how many times a skill appears in job postings. I also only focused on the top 5 skills so that job seekers know exactly what to tackle first.
+To answer this, we need to see how many times a skill appears in job postings. We also will only be focusing on the top 5 skills so that job seekers know exactly what to tackle first.
 
 ```sql
 SELECT
@@ -160,20 +161,19 @@ LIMIT 5;
 The result:
 | Skill     | Job Count |
 |-----------|-----------|
-| Excel     | 1084      |
-| SQL       | 1051      |
-| Python    | 631       |
-| Power BI  | 515       |
-| Tableau   | 378       |
-
+| Excel     | 2227      |
+| SQL       | 2096      |
+| Python    | 1412      |
+| Power BI  | 1084      |
+| Tableau   | 822       |
 <br>
 
 - **Excel** is still very much relevant for entry level jobs as it tops the list
 - **SQL** is the bread and butter of data analysts, so it's no surprise that entry level jobs demand it.
-- **Data visualization tools** like Tableau and Power BI
-are also in high demnand.
 - **Python** also makes it to the top 5 as it can be used 
 for Exploratory Data Analysis and one can further upskill and add **Machine Learning** as one gets proficient in python.
+- **Data visualization tools** like Tableau and Power BI
+are also in high demand.
 
 <br>
 
@@ -212,43 +212,40 @@ LIMIT 25;
 <br>
 
 The result:
-| Skill         | Average Yearly Salary (USD) |
-|---------------|-----------------------------|
-| AWS           | 163,782                     |
-| Spark         | 163,782                     |
-| HTML          | 95,000                      |
-| PHP           | 95,000                      |
-| CSS           | 95,000                      |
-| NoSQL         | 73,333                      |
-| MATLAB        | 73,333                      |
-| SQL           | 71,370                      |
-| Excel         | 70,143                      |
-| R             | 65,290                      |
-| Python        | 62,637                      |
-| VBA           | 60,000                      |
-| Windows       | 57,500                      |
-| Linux         | 57,500                      |
-| Alteryx       | 56,700                      |
-| Pandas        | 56,700                      |
-| Scikit-learn  | 56,700                      |
-| Looker        | 55,257                      |
-| Power BI      | 55,200                      |
-| Tableau       | 53,554                      |
-| Go            | 51,500                      |
-| Dplyr         | 50,400                      |
-| Jupyter       | 50,400                      |
-
+| Skill       | Average Yearly Salary (USD) |
+|-------------|-----------------------------|
+| Spark       | 163,782                     |
+| AWS         | 101,261                     |
+| HTML        | 95,000                      |
+| CSS         | 95,000                      |
+| PHP         | 95,000                      |
+| Snowflake   | 77,500                      |
+| MATLAB      | 73,333                      |
+| NoSQL       | 73,333                      |
+| BigQuery    | 72,500                      |
+| MySQL       | 70,000                      |
+| Redshift    | 70,000                      |
+| Bash        | 70,000                      |
+| Kubernetes  | 70,000                      |
+| Unify       | 70,000                      |
+| PostgreSQL  | 70,000                      |
+| Kafka       | 70,000                      |
+| Airflow     | 70,000                      |
+| Azure       | 68,750                      |
+| SQL         | 68,618                      |
+| Excel       | 68,504                      |
+| Spring      | 68,000                      |
+| Hadoop      | 66,250                      |
+| Word        | 65,175                      |
+| Python      | 64,528                      |
+| R           | 64,508                      |
 
 <br>
 These results show that:
 
-- Jobs requiring **Cloud skills** (e.g AWS) and **Data processing skills** (Spark) pay substantially more than other jobs.
-- **Front-end programming languages** (HTML, CSS) are paid more than
-core data analytical skills (SQL, Pyton etc.) which is odd, since 
-these are not the core data analytics skills.
-- **SQL and Excel** are positined pretty close together, which
-shows how relevant Excel still is for Data Analytics, especially
-when it comes to entry level jobs.
+- **Shift in job requirements:** Although SQL and Excel still make it to the top 25, there is a visible shift from traditional data analytical skills (Excel, SQL, Visualization tools) to more end-to-end skills, as several of the skills mentioned (Kubernetes, Spark, Hadoop, Kafka, Airflow) are more geared towards data engineering, with Spark paying much more than others.
+- **Cloud skills are a must**: General cloud skills (AWS, Azure) as well as specialized cloud data warehouse skills (Snowflake, BigQuery, Redshift) are highly paid.
+- **Microsoft SQL Server did not make the list**: PostgreSQL and mySQL are equally paid, though.
 
 <br>
 
@@ -338,47 +335,67 @@ This will bring out 2 different results, one where the values are sorted first b
 <br>
 
 When sorting by demand_count first, this is the result:
-| Skill     | Demand Count | Average Yearly Salary (USD) |
-|-----------|--------------|------------------------------|
-| SQL       | 19           | 71,370                       |
-| Python    | 12           | 62,637                       |
-| R         | 10           | 65,290                       |
-| Excel     | 7            | 70,143                       |
-| MATLAB    | 6            | 73,333                       |
-| NoSQL     | 6            | 73,333                       |
-| Tableau   | 4            | 53,554                       |
-| Looker    | 2            | 55,257                       |
-| Power BI  | 2            | 55,200                       |
-
+| Skill       | Demand Count | Average Yearly Salary (USD) |
+|-------------|--------------|------------------------------|
+| SQL         | 40           | 68,618                       |
+| Python      | 28           | 64,528                       |
+| Excel       | 18           | 68,504                       |
+| R           | 13           | 64,508                       |
+| Tableau     | 13           | 59,738                       |
+| Power BI    | 7            | 59,443                       |
+| MATLAB      | 6            | 73,333                       |
+| NoSQL       | 6            | 73,333                       |
+| Word        | 4            | 65,175                       |
+| Looker      | 4            | 53,879                       |
+| AWS         | 3            | 101,261                      |
+| SQL Server  | 3            | 56,458                       |
+| VBA         | 3            | 50,858                       |
+| PowerPoint  | 3            | 49,400                       |
+| PostgreSQL  | 2            | 70,000                       |
+| Azure       | 2            | 68,750                       |
+| Spring      | 2            | 68,000                       |
+| Hadoop      | 2            | 66,250                       |
+| Linux       | 2            | 63,750                       |
+| Pandas      | 2            | 58,350                       |
+| Alteryx     | 2            | 49,950                       |
 <br>
 
 When sorting by average_yearly_salary first, the result comes:
-| Skill     | Demand Count | Average Yearly Salary (USD) |
-|-----------|--------------|------------------------------|
-| NoSQL     | 6            | 73,333                       |
-| MATLAB    | 6            | 73,333                       |
-| SQL       | 19           | 71,370                       |
-| Excel     | 7            | 70,143                       |
-| R         | 10           | 65,290                       |
-| Python    | 12           | 62,637                       |
-| Looker    | 2            | 55,257                       |
-| Power BI  | 2            | 55,200                       |
-| Tableau   | 4            | 53,554                       |
-
+| Skill       | Demand Count | Average Yearly Salary (USD) |
+|-------------|--------------|------------------------------|
+| AWS         | 3            | 101,261                      |
+| MATLAB      | 6            | 73,333                       |
+| NoSQL       | 6            | 73,333                       |
+| PostgreSQL  | 2            | 70,000                       |
+| Azure       | 2            | 68,750                       |
+| SQL         | 40           | 68,618                       |
+| Excel       | 18           | 68,504                       |
+| Spring      | 2            | 68,000                       |
+| Hadoop      | 2            | 66,250                       |
+| Word        | 4            | 65,175                       |
+| Python      | 28           | 64,528                       |
+| R           | 13           | 64,508                       |
+| Linux       | 2            | 63,750                       |
+| SAS         | 2            | 60,000                       |
+| Tableau     | 13           | 59,738                       |
+| Power BI    | 7            | 59,443                       |
+| Pandas      | 2            | 58,350                       |
+| SQL Server  | 3            | 56,458                       |
+| Looker      | 4            | 53,879                       |
+| VBA         | 3            | 50,858                       |
+| Alteryx     | 2            | 49,950                       |
+| PowerPoint  | 3            | 49,400                       |
 
 <br>
 
 From both these result sets, we gather:
-- **SQL** is the most in-demand skill for Entry level roles.
-It also ranks in the top 3 most paid skills.
-- **NoSQL** is the highest paid skill for entry level
-jobs, but it is not in much demand.
-- **Excel** is still very much relevant
-as it comes in the top 5 skills, with resepct to
-both the demand and the compensation.
-- **Visualization tools** (Looker, Tableau, Power BI)
-consistently rank at the bottom of the result in both
-aspects.
+- **SQL** is the only skill that is both high demand and highly paid, as it is the most in-demand skill for Entry level roles, and also ranks in the top 5 in terms of pay.
+- **Programming languages:** *MATLAB* is the second highest paid skill, but is limited to certain niche roles, such as legacy systems. Both *Python* and *R* are  in high demand, with average pay.
+- **Excel is still very much relevant** as it is highly in demand, and it is also paid better than both *Python* and *R*.
+- **Cloud skills, such as AWS and Azure** are the highly paid., niche role skills.
+- **Database management systems:** *PostgreSQL* is paid much better than *SQL Server*, both are in equal demand, and *MySQL* did not make the list.
+ 
+- **Visualization tools**: *Tableau* is more in-demand than *Power BI*, and both are paid similarly.
 
 <br><br>
 
@@ -396,13 +413,11 @@ I also fully grasped the analytical thought process, of how to write queries tha
 # Conclusion
 
 ### Key Insights:
-1. **Top paying Data Analyst jobs:** Most of the jobs are located in the US, are full-time and on-site.
-2. **Skills for top paying jobs:** SQL is the most sought-after skill in these jobs, followed by programming languages like Python, R, Matlab, noSQL, and then Excel. Some niche roles require cloud skills (e.g AWS) and data engineering / ETL skills (Spark) and are highly paid.
-3. **Top in-demand skills:** Excel and SQL are very close to each other and rank above all other skills.
-4. **Top paying skills:** Cloud skills are highly paid. Jobs with additional data engineering skills are also highly paid, representing the need for learning how to execute end-to-end projects, from source to analytics, in these niche roles.
-Core data analytics skills (SQL, Excel, Python etc.) are in the middle of the pack when it comes to salary.
-5. **Most optimal skills:** SQL again emerges as the most 
-essential skill, as it is the most in-demand and also ranks in the top 3 in terms of compensation, whereas noSQL is highly paid in some niche roles. Excel, again, is a very desirable skill, both in terms of demand and salary.
+1. **Top paying Data Analyst jobs:** Both remote and on-site jobs are available, and there is a wide gap in the salaries offered, based on the location, with 50 percent jobs being located in the United States.
+2. **Skills for top paying jobs:** SQL is the most sought-after skill in these jobs, followed by Excel and then Python. Some niche roles require cloud skills (e.g AWS) and data engineering / ETL skills (Spark) and are highly paid.
+3. **Top in-demand skills:** Excel, SQL, Python and visualization tools (Tableau and Power BI) are the top 5 most in-demand skills.
+4. **Top paying skills:** Both general cloud skills and specialized cloud data warehousing skills are highly paid. Jobs with additional data engineering skills are also highly paid, representing the need for learning how to execute end-to-end projects, from data sourcing to ETL to analytics.
+5. **Most optimal skills:** *SQL* again emerges as the most essential skill, as it is the most in-demand and also ranks in the top 5 in terms of compensation.It should be combined with *Excel*, a programming languange like *Python* or *R*, a visualization tool (preferably *Tableau*) and a cloud platform, (preferably *AWS*) . 
 
 ### Closing thoughts:
 In the world of Data Analytics, competition is fierce and if one aspires to enter this field, he / she should know exactly what to learn and how to position themselves so that they stand distinguished among the crowd. Learning high-impact, high paying skills is essential not only to land a job, but also to test whether this field will be a good fit for them or not. Learning a skill is only part of the problem, showcasing it is another thing and that's where projects come from. I, among many others, have done this project to showcase my skills, so that one day, I might get a job, but whether I get the job or not, even if one person lands a role in Data after seeing my work, I would consider this a big achievement on my part. 

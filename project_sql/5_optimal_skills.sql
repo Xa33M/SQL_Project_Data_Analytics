@@ -135,7 +135,7 @@ WHERE
 GROUP BY
     skills.skills
 HAVING
-    COUNT(jobs_skills.job_id) > 1
+   COUNT(jobs_skills.job_id) > 1
 ORDER BY
     average_yearly_salary DESC,
     demand_count DESC;
