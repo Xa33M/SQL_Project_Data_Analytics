@@ -15,7 +15,7 @@ With this project, we will be answering these 5 questions:
 2. What skills are required for these top paying jobs?
 3. What are the most in-demand skills for Data Analytic roles?
 4. What are the highest paid skills in Data Analytics?
-5. What are the most optimal skills to learn to land a role in Data Analytics (high paying, high demand skills)?<br><br>The dataset for this project is sourced from "Luke Barousse's SQL Data Analysis Course". [Go to source](https://www.lukebarousse.com/sql)
+5. What are the most optimal skills to learn to land a role in Data Analytics (high paying, high demand skills)?<br><br>The dataset for this project is sourced from "Luke Barousse's SQL Data Analysis Course". The original dataset is limited to the year 2023, which is updated to 30th June, 2025 with the purchase of supporter resources. [Go to source](https://www.lukebarousse.com/sql)
 
 <br><br>
 
