@@ -30,17 +30,17 @@ Possible Errors:
 
 -- NOTE: This has been updated from the video to fix issues with encoding
 COPY company_dim
-FROM 'C:\PostGresImports\SQL Course\csv_files\company_dim.csv'
+FROM 'C:\PostGresImports\SQL Course\star_schema_files\company_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 COPY skills_dim
-FROM 'C:\PostGresImports\SQL Course\csv_files\skills_dim.csv'
+FROM 'C:\PostGresImports\SQL Course\star_schema_files\skills_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 COPY job_postings_fact
-FROM 'C:\PostGresImports\SQL Course\csv_files\job_postings_fact.csv'
+FROM 'C:\PostGresImports\SQL Course\star_schema_files\job_postings_fact.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 COPY skills_job_dim
-FROM 'C:\PostGresImports\SQL Course\csv_files\skills_job_dim.csv'
+FROM 'C:\PostGresImports\SQL Course\star_schema_files\skills_job_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
