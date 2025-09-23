@@ -121,10 +121,9 @@ The result:
 
 ![Alt text](/Images/Query_2.png)
 - **SQL** is the top skill, appearing in 8 jobs.
- **Excel** is the next most popular skill, appearing in 5 jobs.
+- **Excel** is the next most popular skill, appearing in 5 jobs.
 - **Python** completes the top 3, appearing in only 2 jobs. 
--
-- Out of the 2 most popular Data visualization tools (Tableau and Power BI), only **Tableau** is mentioned, appearing in only 1 job.
+- Out of the 2 most popular Data visualization tools (Tableau and Power BI), only *Tableau* is mentioned, appearing in only 1 job.
 
 <br>
 
