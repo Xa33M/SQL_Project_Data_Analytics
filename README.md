@@ -254,7 +254,7 @@ when it comes to entry level jobs.
 
 ## 5. What are the most optimal skills to learn to land a role in data analytics (high paying, high demand)?
 To answer this, we have to combine the results of queries 3 and 4 and SELECT only those skills that are common to both results. This query will use multiple CTE's.
-#### Note: We will have to remove the LIMIT clause from both queries to get all the skills.
+#### Note: We will have to remove the LIMIT clause from both queries to get all the skills. We will also include only those skills with a demand count of atleast 2.
 <br>
 
 ```sql
